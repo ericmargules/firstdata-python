@@ -33,4 +33,4 @@ class TransactionResponse(BaseModel):
 		self.set_attributes(params)
 
 	def is_successful(self):
-		return self.transactionStatus is 'APPROVED'
+		return self.transaction_status is 'APPROVED'

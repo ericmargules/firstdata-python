@@ -28,11 +28,11 @@
         }
     })
 
-    if sale.is_successful:
-        print('Transaction' + sale.ipgTransactionId + ' was successful!')
+    if sale.is_successful():
+        print('Transaction' + sale.ipg_transaction_id + ' was successful!')
     else:
         print('Error processing transaction:\n')
-        print('Message: ' + sale.error.message)
+        print('Error message: ' + sale.error.message)
 
 ## License
 
