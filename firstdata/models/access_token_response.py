@@ -14,8 +14,8 @@ class AccessTokenResponse(BaseModel):
 		'error' : ResponseError
 	}
 
-	def __init__(self, **kwargs):
-		self.set_attributes(kwargs)
+	def __init__(self, params):
+		self.set_attributes(params)
 
 	def valid_token(self):
 		return True 

@@ -6,8 +6,8 @@ class TransactionPortal:
 		self.config = portal.config
 
 	def sale(self, params):
-		kwargs.update({'transactionType' : 'SALE'})
-		pt = firstdata.PrimaryTransaction(**params)
+		params.update({'transactionType' : 'SALE'})
+		pt = firstdata.PrimaryTransaction(params)
 		return self.process(pt)
 
 	def process(self, body='', path=''):
@@ -15,4 +15,4 @@ class TransactionPortal:
 
 	def _process(self, path, body):
 		response = self.config.http().post(path, body)
-		return firstdata.TransactionResponse(**response)
+		return firstdata.TransactionResponse(response)

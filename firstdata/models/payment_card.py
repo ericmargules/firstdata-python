@@ -21,11 +21,10 @@ class PaymentCard(BaseModel):
 		'authentication_result' : AuthenticationResult
 	}
 
-	def __init__(self, **kwargs):
-		if 'expiry_date' in kwargs :
-			kwargs['expiry_date'] = self.format_expiration(kwargs['expiry_date'])
-			print kwargs['expiry_date'].month
-		self.set_attributes(kwargs)
+	def __init__(self, params):
+		if 'expiry_date' in params :
+			params['expiry_date'] = self.format_expiration(params['expiry_date'])
+		self.set_attributes(params)
 
 	def format_expiration(self, exp):
 		if isinstance(exp, str) or isinstance(exp, int):

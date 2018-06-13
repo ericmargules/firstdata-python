@@ -11,7 +11,7 @@ class Lodging(BaseModel):
 		'no_show_indicator'
 	]
 
-	def __init__(self, **kwargs):
-		self.set_attributes(kwargs)
+	def __init__(self, params):
+		self.set_attributes(params)
 		if hasattr(self, 'extra_charges'):
 			set_list_items('extra_charges', ExtraCharge)

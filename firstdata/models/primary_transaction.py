@@ -25,7 +25,7 @@ class PrimaryTransaction(BaseModel):
 		'industry_specific_extensions' : IndustrySpecificExtensions
 	}
 
-	def __init__(self, **kwargs):
-		self.set_attributes(kwargs)
+	def __init__(self, params):
+		self.set_attributes(params)
 		if hasattr(self, 'basket_items'):
 			self.set_list_items('basket_items', BasketItem)

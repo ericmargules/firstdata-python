@@ -22,10 +22,10 @@ class Config:
 		return "First Data Python Package {0}".format(version.ReleaseVersion.NUMBER)
 
 	def signature(self):
-		return firstdata.Signature(
-			api_key=self.api_key,
-			api_secret=self.api_secret
-		)
+		return firstdata.Signature({
+			"api_key":self.api_key,
+			"api_secret":self.api_secret
+		})
 
 	def http(self):
 		return firstdata.HTTP(self)

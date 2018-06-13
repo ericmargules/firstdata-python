@@ -9,7 +9,7 @@ class CertificateInquiryResponse(BaseModel):
 		'certificates'
 	]
 
-	def __init__(self, **kwargs):
-		self.set_attributes(kwargs)
+	def __init__(self, params):
+		self.set_attributes(params)
 		if hasattr(self,'certificates'):
 			self.set_list_items('certificates', Certificate)

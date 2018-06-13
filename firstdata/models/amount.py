@@ -13,9 +13,9 @@ class Amount(BaseModel):
 		'components' : AmountComponents
 	}
 
-	def __init__(self, **kwargs):
-		self.set_attributes(kwargs)
-		if not self.valid_currency(kwargs['currency']):
+	def __init__(self, params):
+		self.set_attributes(params)
+		if not self.valid_currency(params['currency']):
 			raise ValueError("Currency designator must be ISO 4217 standard")
 
 	def valid_currency(self, currency):

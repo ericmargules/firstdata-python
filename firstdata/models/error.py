@@ -12,7 +12,7 @@ class ResponseError(BaseModel):
 		'details' : ErrorDetails 
 	}
 
-	def __init__(self, **kwargs):
-		self.set_attributes(kwargs)
+	def __init__(self, params):
+		self.set_attributes(params)
 		if hasattr(self, 'details'):
 			set_list_items('details', ErrorDetails)

@@ -29,8 +29,8 @@ class TransactionResponse(BaseModel):
 		'error' : ResponseError
 	}
 
-	def __init__(self, **kwargs):
-		self.set_attributes(kwargs)
+	def __init__(self, params):
+		self.set_attributes(params)
 
 	def is_successful(self):
 		return self.transactionStatus is 'APPROVED'

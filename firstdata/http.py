@@ -37,5 +37,5 @@ class HTTP():
 			res = r.read()
 			return json.loads(res)
 		except HTTPError as e:
-			raise ValueError(e.read())
+			return json.loads(e.read())
 

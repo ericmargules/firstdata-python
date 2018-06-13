@@ -14,7 +14,7 @@ class CarRental(BaseModel):
 		'no_show_indicator'
 	]
 
-	def __init__(self, **kwargs):
-		self.set_attributes(kwargs)
-		if hasattr(self, 'extraCharges'):
-			set_list_items('extraCharges', ExtraCharge)
+	def __init__(self, params):
+		self.set_attributes(params)
+		if hasattr(self, 'extra_charges'):
+			set_list_items('extra_charges', ExtraCharge)

@@ -6,5 +6,5 @@ class ExtraCharge(BaseModel):
 		'charge_item'
 	]
 
-	def __init__(self, **kwargs):
-		self.set_attributes(kwargs)
+	def __init__(self, params):
+		self.set_attributes(params)

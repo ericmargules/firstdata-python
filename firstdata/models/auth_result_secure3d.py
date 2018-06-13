@@ -10,5 +10,5 @@ class AuthResultSecure3d(BaseModel):
 		'xid'
 	]
 
-	def __init__(self, **kwargs):
-		self.set_attributes(kwargs)
+	def __init__(self, params):
+		self.set_attributes(params)

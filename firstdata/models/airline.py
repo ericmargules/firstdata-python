@@ -16,13 +16,13 @@ class Airline(BaseModel):
 		'reservation_system',
 		'restricted',
 		'travel_route',
-		'related_ticketNumber',
+		'related_ticket_number',
 		'ancillary_service_category',
 		'ticket_purchase'
 	]
 
-	def __init__(self, **kwargs):
-		self.set_attributes(kwargs)
+	def __init__(self, params):
+		self.set_attributes(params)
 		if hasattr(self, 'travel_route'):
 			self.set_list_items('travel_route', TravelRoute)
 		if hasattr(self, 'ancillary_service_category'):

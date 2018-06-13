@@ -4,7 +4,7 @@ import re
 class BaseModel:
 
 	def set_attributes(self, params):
-		_params = self.snake_case_dict(params)
+		_params = self.to_snake_case_dict(params)
 		if hasattr(self, 'ATTR'):
 			for attr in self.ATTR:
 				if attr in _params and _params[attr] is not None:
@@ -15,7 +15,7 @@ class BaseModel:
 				if var_name in _params and _params[var_name] is not None:
 					setattr(self, var_name, self.obj_or_dict(_params[var_name], class_name))
 
-	def snake_case_dict(self, dict):
+	def to_snake_case_dict(self, dict):
 		sc_dict = {}
 		for k in dict:
 			sc_dict[self.to_snake_case(k)] = dict[k]
@@ -23,7 +23,7 @@ class BaseModel:
 
 	def obj_or_dict(self, params, obj):
 		if isinstance(params, dict):
-			return obj(**params)
+			return obj(params)
 		elif isinstance(params, obj):
 			return params
 		else:
@@ -42,10 +42,10 @@ class BaseModel:
 				values = map(lambda x: x.to_dict(), val)
 			else:
 				value = str(val)
-			self_dict[self.to_camel_case(var)] = value
+			self_dict[self.to_pascal_case(var)] = value
 		return self_dict
 
-	def to_camel_case(self, string):
+	def to_pascal_case(self, string):
 		first, rest = string.split('_')[0], string.split('_')[1:]
 		return first + ''.join(word.capitalize() for word in rest)
 
@@ -56,5 +56,5 @@ class BaseModel:
 	def set_list_items(self, attr_name, obj):
 		items = []
 		for item in getattr(self, attr_name):
-			items.append(obj(**item))
+			items.append(obj(item))
 		setattr(self, attr_name, items)
