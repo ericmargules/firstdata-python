@@ -4,10 +4,10 @@ class Config:
 
 	BASE_URL = "api-qa.payeezy.com/globalApi/v1"
 
-	def __init__(self, **kwargs):
-		self.api_key = kwargs["api_key"]
-		self.api_secret = kwargs["api_secret"]
-		self.app_id = kwargs["app_id"]
+	def __init__(self, params):
+		self.api_key = params["api_key"]
+		self.api_secret = params["api_secret"]
+		self.app_id = params["app_id"]
 
 	def base_url(self):
 		return self.http_protocol() + self.BASE_URL

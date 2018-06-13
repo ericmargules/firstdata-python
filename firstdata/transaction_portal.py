@@ -5,9 +5,9 @@ class TransactionPortal:
 	def __init__(self, portal):
 		self.config = portal.config
 
-	def sale(self, **kwargs):
+	def sale(self, params):
 		kwargs.update({'transactionType' : 'SALE'})
-		pt = firstdata.PrimaryTransaction(**kwargs)
+		pt = firstdata.PrimaryTransaction(**params)
 		return self.process(pt)
 
 	def process(self, body='', path=''):
