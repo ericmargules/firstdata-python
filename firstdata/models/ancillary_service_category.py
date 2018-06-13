@@ -3,7 +3,7 @@ from base_model import BaseModel
 class AncillaryServiceCategory(BaseModel):
 
 	ATTR = [
-		'serviceCategory'
+		'service_category'
 	]
 
 	def __init__(self, **kwargs):

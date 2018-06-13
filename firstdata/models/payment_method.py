@@ -10,9 +10,9 @@ class PaymentMethod(BaseModel):
 	]
 
 	OBJ_ATTR = {
-		'paymentCard' : PaymentCard, 
-		'sepaDirectDebit' : SepaDirectDebit, 
-		'applePay' : ApplePay
+		'payment_card' : PaymentCard, 
+		'sepa_direct_debit' : SepaDirectDebit, 
+		'apple_pay' : ApplePay
 	}
 
 	def __init__(self, **kwargs):

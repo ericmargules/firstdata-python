@@ -5,7 +5,7 @@ from shipping import Shipping
 class Order(BaseModel):
 
 	ATTR = [
-		'orderId'
+		'order_id'
 	]
 
 	OBJ_ATTR = {

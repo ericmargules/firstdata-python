@@ -3,7 +3,7 @@ from base_model import BaseModel
 class ExtraCharge(BaseModel):
 
 	ATTR = [
-		'chargeItem'
+		'charge_item'
 	]
 
 	def __init__(self, **kwargs):

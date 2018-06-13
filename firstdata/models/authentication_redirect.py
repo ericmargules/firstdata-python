@@ -5,7 +5,7 @@ class AuthenticationRedirect(BaseModel):
 
 	ATTR = [
 		'type',
-		'targetUrl'
+		'target_url'
 	]
 
 	OBJ_ATTR = {

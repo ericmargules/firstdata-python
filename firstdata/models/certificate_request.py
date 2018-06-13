@@ -4,8 +4,8 @@ from permissions import Permissions
 class CertificateRequest(BaseModel):
 
 	ATTR = [
-		'appLabel',
-		'walletProvider'
+		'app_label',
+		'wallet_provider'
 	]
 
 	OBJ_ATTR = {

@@ -19,11 +19,11 @@
           'total': '100.00',
           'currency': 'USD'
         },
-        'paymentMethod': {
+        'payment_method': {
           'type': 'PAYMENT_CARD',
-          'paymentCard': {
+          'payment_card': {
             'number': '4111111111111111',
-            'expiryDate': '1223'
+            'expiry_date': '1223'
           }
         }
     })

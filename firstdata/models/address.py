@@ -8,7 +8,7 @@ class Address(BaseModel):
 		'address2',
 		'locality',
 		'region',
-		'postalCode',
+		'postal_code',
 		'country'
 	]
 

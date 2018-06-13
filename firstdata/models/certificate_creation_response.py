@@ -3,8 +3,8 @@ from base_model import BaseModel
 class CertificateCreationResponse(BaseModel):
 
 	ATTR = [
-		'clientRequestId',
-		'apiTraceId',
+		'client_request_id',
+		'api_trace_id',
 		'certificate'
 	]
 

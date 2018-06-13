@@ -3,8 +3,8 @@ from base_model import BaseModel
 class Permissions(BaseModel):
 
 	ATTR = [
-		'authType',
-		'authId'		
+		'auth_type',
+		'auth_id'		
 	]
 
 	def __init__(self, **kwargs):

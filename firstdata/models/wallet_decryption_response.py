@@ -4,7 +4,7 @@ from decrypted_data import DecryptedData
 class WalletDecryptionResponse(BaseModel):
 
 	OBJ_ATTR = {
-		'decryptedData' : DecryptedData
+		'decrypted_data' : DecryptedData
 	}
 
 	def __init__(self, **kwargs):

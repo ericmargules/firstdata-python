@@ -8,7 +8,7 @@ class IndustrySpecificExtensions(BaseModel):
 	OBJ_ATTR = {
 		'airline' : Airline,
 		'lodging' : Lodging,
-		'carRental' : CarRental
+		'car_rental' : CarRental
 	}
 
 	def __init__(self, **kwargs):

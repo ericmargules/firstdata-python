@@ -11,7 +11,7 @@ class BasketItem(BaseModel):
 	]
 
 	OBJ_ATTR = {
-		'unitPrice' : Amount,
+		'unit_price' : Amount,
 	}
 
 	def __init__(self, **kwargs):

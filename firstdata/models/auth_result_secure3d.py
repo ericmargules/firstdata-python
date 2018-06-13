@@ -4,9 +4,9 @@ class AuthResultSecure3d(BaseModel):
 
 	ATTR = [
 		'type',
-		'verificationResponse',
-		'payerAuthenticationResponse',
-		'authenticationValue',
+		'verification_response',
+		'payer_authentication_response',
+		'authentication_value',
 		'xid'
 	]
 

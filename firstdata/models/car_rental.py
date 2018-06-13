@@ -4,14 +4,14 @@ from extra_charge import ExtraCharge
 class CarRental(BaseModel):
 
 	ATTR = [
-		'agreementNumber',
-		'renterName',
-		'returnCity',
-		'returnDate',
-		'pickupDate',
-		'rentalClassId',
-		'extraCharges',
-		'noShowIndicator'
+		'agreement_number',
+		'renter_name',
+		'return_city',
+		'return_date',
+		'pickup_date',
+		'rental_class_id',
+		'extra_charges',
+		'no_show_indicator'
 	]
 
 	def __init__(self, **kwargs):

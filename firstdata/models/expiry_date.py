@@ -8,12 +8,12 @@ class ExpiryDate(BaseModel):
 	]
 
 	def __init__(self, **kwargs):
-		if 'expiryDate' in kwargs:
+		if 'expiry_date' in kwargs:
 			self.filter_expiry_date(kwargs)
 		self.set_attributes(kwargs)
 
 	def filter_expiry_date(self, params):
-		expiration = str(params['expiryDate'])
+		expiration = str(params['expiry_date'])
 		if len(expiration) == 4:
 			params['month'] = expiration[0:2]
 			params['year'] = expiration[2:4]

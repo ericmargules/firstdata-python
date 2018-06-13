@@ -4,12 +4,12 @@ class AmountComponents(BaseModel):
 
 	ATTR = [
 		'subtotal',
-		'vatAmount',
-		'localTax',
+		'vat_amount',
+		'local_tax',
 		'shipping',
 		'cashback',
 		'tip',
-		'convenienceFee'
+		'convenience_fee'
 	]
 
 	def __init__(self, **kwargs):

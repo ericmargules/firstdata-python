@@ -10,22 +10,22 @@ from pt_additional_details import AdditionalDetails
 class PrimaryTransaction(BaseModel):
 
 	ATTR = [
-		'transactionType',
-		'storeId',
-		'clientTransactionId',
-		'basketItems'
+		'transaction_type',
+		'store_id',
+		'client_transaction_id',
+		'basket_items'
 	]
 
 	OBJ_ATTR = {
 		'amount' : Amount,
-		'paymentMethod' : PaymentMethod,
+		'payment_method' : PaymentMethod,
 		'order' : Order,
-		'splitShipment' : SplitShipment,
-		'additionalDetails' : AdditionalDetails,
-		'industrySpecificExtensions' : IndustrySpecificExtensions
+		'split_shipment' : SplitShipment,
+		'additional_details' : AdditionalDetails,
+		'industry_specific_extensions' : IndustrySpecificExtensions
 	}
 
 	def __init__(self, **kwargs):
 		self.set_attributes(kwargs)
-		if hasattr(self, 'basketItems'):
-			self.set_list_items('basketItems', BasketItem)
+		if hasattr(self, 'basket_items'):
+			self.set_list_items('basket_items', BasketItem)

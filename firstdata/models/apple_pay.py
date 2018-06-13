@@ -7,7 +7,7 @@ class ApplePay(BaseModel):
 		'signature',
 		'data',
 		'version',
-		'appId'
+		'app_id'
 	]
 
 	OBJ_ATTR = {

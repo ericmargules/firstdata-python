@@ -3,8 +3,8 @@ from base_model import BaseModel
 class SplitShipment(BaseModel):
 
 	ATTR = [
-		'totalCount',
-		'finalShipment',
+		'total_count',
+		'final_shipment',
 	]
 
 	def __init__(self, **kwargs):

@@ -6,8 +6,8 @@ from auth_result_secure3d import AuthResultSecure3d as Secure3d
 class AuthenticationResult(BaseModel):
 
 	OBJ_ATTR = {
-		'applePay' : ApplePay,
-		'secure3d' : Secure3d
+		'apple_pay' : ApplePay,
+		'secure_3d' : Secure3d
 	}
 
 	def __init__(self, **kwargs):

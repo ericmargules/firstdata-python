@@ -7,28 +7,28 @@ class PaymentCard(BaseModel):
 
 	ATTR = [
 		'number',
-		'securityCode',
-		'cardFunction',
-		'cardholderName',
+		'security_code',
+		'card_function',
+		'cardholder_name',
 		'brand',
 		'wallet_provider_id',
-		'enableTokenization'
+		'enable_tokenization'
 	]
 
 	OBJ_ATTR = {
-		'expiryDate' : ExpiryDate,
-		'authenticationRequest' : AuthenticationRequest,
-		'authenticationResult' : AuthenticationResult
+		'expiry_date' : ExpiryDate,
+		'authentication_request' : AuthenticationRequest,
+		'authentication_result' : AuthenticationResult
 	}
 
 	def __init__(self, **kwargs):
-		if 'expiryDate' in kwargs :
-			kwargs['expiryDate'] = self.format_expiration(kwargs['expiryDate'])
-			print kwargs['expiryDate'].month
+		if 'expiry_date' in kwargs :
+			kwargs['expiry_date'] = self.format_expiration(kwargs['expiry_date'])
+			print kwargs['expiry_date'].month
 		self.set_attributes(kwargs)
 
 	def format_expiration(self, exp):
 		if isinstance(exp, str) or isinstance(exp, int):
-			return ExpiryDate(expiryDate=exp)
+			return ExpiryDate(expiry_date=exp)
 		else:
 			return exp

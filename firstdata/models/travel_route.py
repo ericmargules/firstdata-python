@@ -3,15 +3,15 @@ from base_model import BaseModel
 class TravelRoute(BaseModel):
 
 	ATTR = [
-		'departureDate',
+		'departure_date',
 		'origin',
 		'destination',
-		'carrierCode',
-		'serviceClass',
-		'stopoverType',
-		'fareBasisCode',
-		'departureTax',
-		'flightNumber'
+		'carrier_code',
+		'service_class',
+		'stopover_type',
+		'fare_basis_code',
+		'departure_tax',
+		'flight_number'
 	]
 
 	def __init__(self, **kwargs):

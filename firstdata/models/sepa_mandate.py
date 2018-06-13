@@ -5,7 +5,7 @@ class SepaMandate(BaseModel):
 	ATTR = [
 		'reference',
 		'url',
-		'signatureDate',
+		'signature_date',
 		'type'
 	]
 

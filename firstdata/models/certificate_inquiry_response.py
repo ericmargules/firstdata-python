@@ -4,8 +4,8 @@ from certificate import Certificate
 class CertificateInquiryResponse(BaseModel):
 
 	ATTR = [
-		'clientRequestId',
-		'apiTraceId',
+		'client_request_id',
+		'api_trace_id',
 		'certificates'
 	]
 

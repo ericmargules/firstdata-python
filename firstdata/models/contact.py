@@ -4,7 +4,7 @@ class Contact(BaseModel):
 
 	ATTR = [
 		'phone',
-		'mobilePhone',
+		'mobile_phone',
 		'fax',
 		'email'
 	]

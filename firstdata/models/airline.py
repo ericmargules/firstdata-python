@@ -5,25 +5,25 @@ from ancillary_service_category import AncillaryServiceCategory
 class Airline(BaseModel):
 
 	ATTR = [
-		'passengerName',
-		'ticketNumber',
-		'issuingCarrier',
-		'carrierName',
-		'travelAgencyIataCode',
-		'travelAgencyName',
-		'airlinePlanNumber',
-		'airlineInvoiceNumber',
-		'reservationSystem',
+		'passenger_name',
+		'ticket_number',
+		'issuing_carrier',
+		'carrier_name',
+		'travel_agency_iata_code',
+		'travel_agency_name',
+		'airline_plan_number',
+		'airline_invoice_number',
+		'reservation_system',
 		'restricted',
-		'travelRoute',
-		'relatedTicketNumber',
-		'ancillaryServiceCategory',
-		'ticketPurchase'
+		'travel_route',
+		'related_ticketNumber',
+		'ancillary_service_category',
+		'ticket_purchase'
 	]
 
 	def __init__(self, **kwargs):
 		self.set_attributes(kwargs)
-		if hasattr(self, 'travelRoute'):
-			self.set_list_items('travelRoute', TravelRoute)
-		if hasattr(self, 'ancillaryServiceCategory'):
-			self.set_list_items('ancillaryServiceCategory', AncillaryServiceCategory)
+		if hasattr(self, 'travel_route'):
+			self.set_list_items('travel_route', TravelRoute)
+		if hasattr(self, 'ancillary_service_category'):
+			self.set_list_items('ancillary_service_category', AncillaryServiceCategory)

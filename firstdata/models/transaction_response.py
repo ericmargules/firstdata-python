@@ -7,25 +7,25 @@ from error import ResponseError
 class TransactionResponse(BaseModel):
 
 	ATTR = [
-		'clientRequestId',
-		'apiTraceId',
-		'ipgTransactionId',
-		'orderId',
-		'transactionType',
-		'authorizationCode',
-		'securityCodeResponse',
+		'client_request_id',
+		'api_trace_id',
+		'ipg_transaction_id',
+		'order_id',
+		'transaction_type',
+		'authorization_code',
+		'security_code_response',
 		'brand',
 		'country',
-		'terminalId',
-		'clientTransactionId',
-		'transactionTime',
-		'transactionStatus'
+		'terminal_id',
+		'clientTransaction_id',
+		'transaction_time',
+		'transaction_status'
 	]
 
 	OBJ_ATTR = {
-		'avsResponse' : AvsResponse,
-		'approvedAmount' : Amount,
-		'authenticationRedirect' : AuthenticationRedirect,
+		'avs_response' : AvsResponse,
+		'approved_amount' : Amount,
+		'authentication_redirect' : AuthenticationRedirect,
 		'error' : ResponseError
 	}
 

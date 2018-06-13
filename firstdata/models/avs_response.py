@@ -3,8 +3,8 @@ from base_model import BaseModel
 class AvsResponse(BaseModel):
 
 	ATTR = [
-		'streetNumberMatch',
-		'postalCodeMatch'
+		'street_number_match',
+		'postal_code_match'
 	]
 
 	def __init__(self, **kwargs):

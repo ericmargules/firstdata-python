@@ -5,12 +5,12 @@ from split_shipment import SplitShipment
 class SecondaryTransaction(BaseModel):
 
 	ATTR = [
-		'storeId'
+		'store_id'
 	]
 
 	OBJ_ATTR = {
 		'amount' : Amount,
-		'splitShipment' : SplitShipment
+		'split_shipment' : SplitShipment
 	}
 
 	def __init__(self, **kwargs):

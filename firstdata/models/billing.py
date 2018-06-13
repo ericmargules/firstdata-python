@@ -6,7 +6,7 @@ class Billing(BaseModel):
 
 	ATTR = [
 		'name',
-		'personalNumber',
+		'personal_number',
 		'birthdate',
 		'gender',
 	]
