@@ -4,7 +4,7 @@
 
 * Python 2.6, 2.7, 3.3, 3.4, or 3.5
 
-## Quick Start Example
+## Example Transaction       
 
     import firstdata
 
@@ -31,7 +31,7 @@
     if sale.is_successful():
         print('Transaction' + sale.ipg_transaction_id + ' was successful!')
     else:
-        print('Error processing transaction:\n')
+        print('Error processing transaction:')
         print('Error message: ' + sale.error.message)
 
 ## License

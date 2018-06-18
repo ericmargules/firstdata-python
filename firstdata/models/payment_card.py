@@ -28,6 +28,6 @@ class PaymentCard(BaseModel):
 
 	def format_expiration(self, exp):
 		if isinstance(exp, str) or isinstance(exp, int):
-			return ExpiryDate(expiry_date=exp)
+			return ExpiryDate({'expiry_date': exp})
 		else:
 			return exp

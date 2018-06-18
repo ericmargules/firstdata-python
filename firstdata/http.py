@@ -38,4 +38,3 @@ class HTTP():
 			return json.loads(res)
 		except HTTPError as e:
 			return json.loads(e.read())
-
